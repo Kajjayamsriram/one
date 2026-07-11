@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+#Removed lang="en"
+<html >
 
 <head>
     <meta charset="utf-8" />
