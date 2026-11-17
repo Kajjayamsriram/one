@@ -32,7 +32,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'docker run --name cont -p 8080:8080 myimage'
+    script: 'docker run --name cont -p 8081:8080 myimage'
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://20.253.147.168:8080/'
