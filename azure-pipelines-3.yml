@@ -18,6 +18,12 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
+- script: |
+    echo "listing war file"
+    find $(System.DefaultWorkingDirectory) -name "*.war"
+  displayName: 'List war file'
+
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://20.253.147.168:8080/'
