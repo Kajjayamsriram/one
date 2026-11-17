@@ -5,6 +5,8 @@ trigger:
 
 pool:
   name: beta_pool
+  demands:
+    - Agent.Name -equals slave-server
 
 steps:
 - task: Maven@4
