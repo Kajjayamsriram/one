@@ -25,7 +25,9 @@ steps:
     echo "listing war file"
     find $(System.DefaultWorkingDirectory) -name "*.war"
   displayName: 'List war file'
-
+- task: CmdLine@2
+  inputs:
+    script: 'docker build -t myimg .'
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://20.253.147.168:8080/'
