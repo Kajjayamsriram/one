@@ -28,14 +28,14 @@ steps:
 
 - script: |
     cd $(System.DefaultWorkingDirectory)
-    docker buildx build -t sriramk16/azurepipeline --load .
+    docker buildx build -t sriramk16/azurepipeline:v2 --load .
   displayName: 'Build Docker Image'
 - task: CmdLine@2
   inputs:
     script: 'docker rm -f cont'
 - task: CmdLine@2
   inputs:
-    script: 'docker run -d --name cont -p 8081:8080 sriramk16/azurepipeline'
+    script: 'docker run -d --name cont -p 8081:8080 sriramk16/azurepipeline:v2'
 - task: TomcatDeployment@1
   inputs:
     TomcatUrl: 'http://20.253.147.168:8080/'
@@ -50,3 +50,4 @@ steps:
     containerRegistry: 'docker-registry'
     repository: 'sriramk16/azurepipeline'
     command: 'push'
+    tags: v2
