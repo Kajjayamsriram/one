@@ -27,8 +27,7 @@ steps:
   displayName: 'List war file'
 
 - script: |
-    export DOCKER_BUILDKIT=1
-    docker build -t myweb:latest .
+    docker docker buildx build -t myimage --load .
   displayName: 'Build Docker Image'
 - task: TomcatDeployment@1
   inputs:
