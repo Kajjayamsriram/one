@@ -29,7 +29,7 @@ steps:
     TomcatUrl: 'http://20.253.147.168:8080/'
     Username: 'tomcat'
     Password: 'admin@123'
-    warFile: '$(System.DefaultWorkingDirectory)/target/*.war'
+    warFile: '$(System.DefaultWorkingDirectory)/target/myweb-8.6.12.war'
     Context: '/demo'
     ServerVersion: '7OrAbove'
 
