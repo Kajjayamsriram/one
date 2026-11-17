@@ -27,6 +27,7 @@ steps:
   displayName: 'List war file'
 
 - script: |
+    cd $(System.DefaultWorkingDirectory)
     docker buildx build -t myimage --load .
   displayName: 'Build Docker Image'
 
