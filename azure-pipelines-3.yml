@@ -27,7 +27,7 @@ steps:
   displayName: 'List war file'
 
 - script: |
-    docker docker buildx build -t myimage --load .
+    docker buildx build -t myimage --load .
   displayName: 'Build Docker Image'
 - task: TomcatDeployment@1
   inputs:
