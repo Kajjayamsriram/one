@@ -35,15 +35,15 @@
     </build>
 	<repositories>
 		<repository>
-  <id>mydevops-feed</id>
-  <url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
+			<id>demo-feed</id>
+			<url>https://pkgs.dev.azure.com/sriramkajjayam143/demo-first-project/_packaging/demo-feed/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	<distributionManagement>
 		 <snapshotRepository>
